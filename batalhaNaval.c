@@ -54,14 +54,22 @@ int main() {
         printf("(%d, %d)\n", linha_inicial_vertical + i, coluna_vertical);
     }
 
-    // Exibe o tabuleiro completo
-    printf("\nTabuleiro (0 = água, 3 = navio):\n\n");
+     // Exibe o cabeçalho com letras A-J
+     
+    printf("\nTabuleiro (0 = água, 3 = navio):\n\n   ");
+    for (char letra = 'A'; letra <= 'J'; letra++) {
+        printf(" %c", letra);
+    }
+    printf("\n");
+
+    // Exibe o tabuleiro com numeração lateral 1 a 10
+
     for (int linha = 0; linha < 10; linha++) {
+        printf("%2d ", linha + 1);  // Números das linhas (1 a 10)
         for (int coluna = 0; coluna < 10; coluna++) {
-            printf("%d ", tabuleiro[linha][coluna]);
+            printf(" %d", tabuleiro[linha][coluna]);
         }
         printf("\n");
     }
-
     return 0;
 }
